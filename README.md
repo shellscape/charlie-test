@@ -5,7 +5,7 @@ This repo uses:
 - [Better Auth](https://better-auth.com/) for authentication
 - [Turso](https://turso.tech/) (libSQL) as the backing database for Better Auth’s store
 - [Drizzle ORM](https://orm.drizzle.team/) as the ORM
-- [Plunk](https://www.useplunk.com/) for email delivery
+- [Plunk](https://www.useplunk.com/) for transactional email delivery
 
 Last updated: 2026-04-06
 Status: Accepted
@@ -54,6 +54,7 @@ We will use Plunk to send transactional email.
 
 - Developer-friendly API and infrastructure for sending email.
 - Can support product email needs (transactional now; campaigns/workflows later if needed).
+- Matches early-stage volume/pricing expectations; revisit if deliverability or throughput needs change.
 
 ## Consequences
 
