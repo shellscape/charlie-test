@@ -7,12 +7,17 @@ This repo uses:
 - [Drizzle ORM](https://orm.drizzle.team/) as the ORM
 
 Last updated: 2026-04-06
+Status: Accepted
 
 ## Decisions
 
 ### Authentication: Better Auth (instead of OpenAuth)
 
 We will use Better Auth as the application authentication layer.
+
+**Alternatives considered**
+
+- OpenAuth: not chosen due to the team’s preference for Better Auth’s API surface and its fit with the Turso + Drizzle stack.
 
 **Why**
 
