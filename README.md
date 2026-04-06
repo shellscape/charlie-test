@@ -5,6 +5,7 @@ This repo uses:
 - [Better Auth](https://better-auth.com/) for authentication
 - [Turso](https://turso.tech/) (libSQL) as the backing database for Better Auth’s store
 - [Drizzle ORM](https://orm.drizzle.team/) as the ORM
+- [Plunk](https://www.useplunk.com/) for email delivery
 
 Last updated: 2026-04-06
 Status: Accepted
@@ -44,6 +45,15 @@ When we need an ORM/query builder, we’ll use Drizzle.
 - SQL-first and strongly typed (TypeScript) without hiding SQL behind a heavy abstraction.
 - Works well with SQLite/libSQL (Turso).
 - Makes schema + migrations explicit and reviewable.
+
+### Email delivery: Plunk
+
+We will use Plunk to send transactional email.
+
+**Why**
+
+- Developer-friendly API and infrastructure for sending email.
+- Can support product email needs (transactional now; campaigns/workflows later if needed).
 
 ## Consequences
 
