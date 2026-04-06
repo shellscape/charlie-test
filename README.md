@@ -1,6 +1,10 @@
 # Technical decision document
 
-This repo uses **Better Auth** for authentication, **Turso (libSQL)** as the backing database for Better Auth’s store, and **Drizzle ORM** as the ORM.
+This repo uses:
+
+- [Better Auth](https://better-auth.com/) for authentication
+- [Turso](https://turso.tech/) (libSQL) as the backing database for Better Auth’s store
+- [Drizzle ORM](https://orm.drizzle.team/) as the ORM
 
 Last updated: 2026-04-06
 
