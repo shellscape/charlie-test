@@ -7,9 +7,10 @@ This repo uses:
 - [Drizzle ORM](https://orm.drizzle.team/) as the ORM
 - [DynamoDB](https://aws.amazon.com/dynamodb/) as the primary application data store
 - [`dynamodb-toolbox`](https://www.npmjs.com/package/dynamodb-toolbox) as the DynamoDB access layer
+- [keytar](https://www.npmjs.com/package/keytar) for OS keychain/keyring storage
 - [Plunk](https://www.useplunk.com/) for transactional email delivery
 
-Last updated: 2026-04-06
+Last updated: 2026-04-07
 Status: Accepted
 
 ## Decisions
