@@ -62,7 +62,8 @@ export function attachOpenTelemetryInterceptors(client: Client, options: Telemet
     const span = spansByRequest.get(request)
 
     if (span) {
-      span.recordException(error as Error)
+      const exception = error instanceof Error ? error : { message: String(error), raw: error }
+      span.recordException(exception)
       span.setStatus({ code: SpanStatusCode.ERROR })
       span.end()
       spansByRequest.delete(request)
