@@ -1,0 +1,15 @@
+{
+  "name": "@shush/cli",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "shush": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@shush/api-client": "workspace:*"
+  }
+}
