@@ -19,12 +19,18 @@ export function attachOpenTelemetryInterceptors(client: Client, options: Telemet
   const spansByRequest = new WeakMap<Request, Span>()
 
   client.interceptors.request.use((request: Request, requestOptions: ResolvedRequestOptions) => {
+    const accept = request.headers.get('accept')
+    if (accept?.includes('text/event-stream')) {
+      return request
+    }
+
     const url = new URL(request.url)
-    const spanName = `${requestOptions.method} ${url.pathname}`
+    const method = requestOptions.method ?? request.method
+    const spanName = `${method} ${url.pathname}`
     const span = tracer.startSpan(spanName, {
       kind: SpanKind.CLIENT,
       attributes: {
-        'http.method': requestOptions.method,
+        'http.method': method,
         'url.full': request.url,
         'server.address': url.hostname
       }
