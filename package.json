@@ -1,0 +1,18 @@
+{
+  "name": "shush",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "services/*"
+  ],
+  "scripts": {
+    "typecheck": "tsc -b --pretty false",
+    "build": "tsc -b --pretty false",
+    "generate": "pnpm -C services/svc-api generate:openapi && pnpm -C packages/api-client generate"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./services/svc-api" },
+    { "path": "./packages/api-client" },
+    { "path": "./packages/cli" }
+  ]
+}
